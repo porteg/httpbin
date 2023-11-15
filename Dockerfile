@@ -19,6 +19,6 @@ RUN pip3 install gunicorn
 ADD . /httpbin
 RUN pip3 install --no-cache-dir /httpbin
 
-EXPOSE 80
+EXPOSE 8000
 
 CMD ["gunicorn", "--access-logfile", "-" ,"httpbin:app"]
