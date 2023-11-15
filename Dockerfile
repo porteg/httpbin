@@ -14,6 +14,7 @@ ADD Pipfile Pipfile.lock /httpbin/
 WORKDIR /httpbin
 RUN /bin/bash -c "pip3 install --no-cache-dir -r <(pipenv lock -r)"
 
+RUN pip3 install gunicorn
 ADD . /httpbin
 RUN pip3 install --no-cache-dir /httpbin
 
